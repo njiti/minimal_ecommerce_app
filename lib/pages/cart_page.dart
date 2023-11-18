@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:minimal_ecommerce_app/components/my_button.dart';
-import 'package:minimal_ecommerce_app/components/my_drawer.dart';
 import 'package:minimal_ecommerce_app/models/product.dart';
 import 'package:provider/provider.dart';
 
@@ -31,7 +30,7 @@ class CartPage extends StatelessWidget {
               //add to cart
               context.read<Shop>().removeFromCart(product);
             },
-            child: Text("Yes"),
+            child: const Text("Yes"),
           )
         ],
       ),
@@ -58,7 +57,7 @@ class CartPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Cart Page"),
+        title: const Text("Cart Page"),
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Column(
@@ -89,7 +88,7 @@ class CartPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: MyButton(
                 onTap: () => payButtonPressed(context),
-                child: Text("PAY NOW")),
+                child: const Text("PAY NOW")),
           )
         ],
       )
